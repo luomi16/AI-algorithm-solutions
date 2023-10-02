@@ -40,7 +40,7 @@ def a_star_pancake(start):
     return []
 
 
-start = "1b2b3w4b"
+start = "1w2w3b4w"
 steps = a_star_pancake(start)
 print("Steps:")
 for step, g, h in steps:
