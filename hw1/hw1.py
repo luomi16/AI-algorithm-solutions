@@ -16,11 +16,6 @@ def flip(s, i):
 # Heuristic Function
 
 
-# def heuristic(state):
-#     goal = ''.join([str(i) for i in range(1, len(state) // 2 + 1)])
-#     actual = ''.join([state[i] for i in range(0, len(state), 2)])
-#     return sum(1 for a, b in zip(goal, actual) if a != b)
-
 def heuristic(state):
     goal = ''.join([str(i) for i in range(1, len(state) // 2 + 1)])
     actual = ''.join([state[i] for i in range(0, len(state), 2)])
@@ -44,10 +39,8 @@ def bfs_pancake(start):
 
     while queue:
         state, path = queue.popleft()
-
         if state == goal:
             return path + [state]
-
         for i in range(1, len(start) // 2 + 1):
             new_state = flip(state, i)
             if new_state not in visited:
