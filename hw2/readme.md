@@ -7,6 +7,7 @@ In this homework, you will work on the same alpha-beta search problem that we ha
 
 ## Example input-output pairs
 
+```
 Example 1
 Input:
 2 4 13 11 1 3 3 7 3 3 2 2
@@ -36,3 +37,4 @@ Input:
 1 4 12 16 1 7 3 1 2 8 10 2
 Output:
 3 11
+```

@@ -8,10 +8,12 @@ You are asked to write a program with two functions that apply perceptron or log
 
 The first function receives n (<100) triplets of x1, x2, y from the user, and returns the value for w (weight) that the perceptron algorithm computes to classify the inputs. Here x1 and x2 show the input features for each sample, and y shows the class. Consider a binary classification with two possible values for y: -1 and +1. Use the same format for input and output as the example below. Note that before the actual input, another input character P will determine the call for the perceptron function.
 
+```
 Example Input:
 P (0, 2,+1) (2, 0, -1) (0, 4,+1) (4, 0, -1) #P indicates perceptron
 Example output:
 -2.0, 0.0 # referring to w=[-2.0, 0.0]
+```
 
 Use the same procedure for updating w, as discussed in slides (). Start from w=[0,0], and update w by a maximum of n\*100 times, where n is the number of input samples (100 times iterating over all of the input samples).
 
@@ -19,15 +21,18 @@ Use the same procedure for updating w, as discussed in slides (). Start from w=[
 
 The second function receives a similar input as described above with the only difference in the first input character (L instead of P). The desired task will still be binary classification. The output, in this case, will be printing the probability values that logistic regression computes for each input belonging to the positive class. Set alpha (learning rate) equal to 0.1.
 
+```
 Example Input:
 L (0, 2,+1) (2, 0, -1) (0, 4, -1) (4, 0, +1) (0, 6, -1) (6, 0, +1) #L indicates Logistic Reg.
 Example output:
 0.29 0.71 0.14 0.86 0.06 0.94
+```
 
 For the logistic regression use the basic procedure introduced in class (). Start from w=[0,0], and update w by a maximum of n\*100 times, where n is the number of input samples (100 times iterating over all of the input samples). Note that when g(z)=sigmoid(z), we will have g'(z)=g(z)(1-g(z)). This is also shown on the Common Activation Functions slide. Not necessarily needed here, but for this case, you can further simplify this calculation ([see here](https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/pdfs/40%20LogisticRegression.pdf), note the end of the doc).
 
 ## Some Other Examples
 
+```
 Input:
 L (0, 2,+1) (2, 0, -1) (0, 4,+1) (4, 0, -1)
 Output:
@@ -95,3 +100,4 @@ L (2, 0, -1) (1, -1, -1) (3, -1, -1) (5, 2, +1) (6, 4, +1) (7, 1, +1) (8, 0, -1)
 0.31 0.0 0.0 1.0 1.0 0.9 0.04
 L (2, 0, -1) (1, -1, -1) (3, -1, -1) (5, 2, +1) (6, 4, +1) (7, 1, +1) (8, 0, -1) (-1, -3, -1) (-2, -5, -1) (9, 10, +1)
 0.31 0.0 0.0 1.0 1.0 0.9 0.04 0.0 0.0 1.0
+```

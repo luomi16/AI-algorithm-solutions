@@ -33,6 +33,7 @@ For instance, if there is a tie between 4b3w2b1b and 3w4w2b1b, then 4b3w2b1b wil
 
 Your program must print the steps that the specified algorithm (e.g., BFS) finds to solve the problem, line by line. In other words, simply prints the solution that the algorithm finds. For each state (except the final state), use the character “|” to show where the flip to go to the next step happens. For A\*, also print the value for the actual cost (function g), and the value of the heuristic function (function h) in each step. The following is an example of an input and output of the program.
 
+```
 Input:
 1b2b3w4b-a # “a” indicates A\*
 
@@ -44,11 +45,13 @@ Output: 1b2b|3w4b g:0, h:0
 2b1w|3w4w g:12, h:2
 1b|2w3w4w g:14, h:0
 1w2w3w4w g:15, h:0
+```
 
 Note that the values for g and h correspond to the “current” state, and the character “|” denotes the location of the flip for going to the “next” state.
 
 ## Some Other Examples
 
+```
 Example 1
 Input: 1w2b3w4b-a
 
@@ -105,3 +108,4 @@ Output: 1b2w3b4b| g:0, h:0
 4b3b2b1w| g:10, h:4
 1b|2w3w4w g:14, h:0
 1w2w3w4w g:15, h:0
+```

@@ -28,6 +28,8 @@ If needed, you can also set the maximum number of iterations to 100,000. After t
 
 Output
 If the input contains “p”, your program has to print the best action that should be chosen for each square or in other words print Π\*. To do this, in separate lines print each state’s index and the action. Here is an example:
+
+```
 Input:
 15 12 8 6 p
 Output:
@@ -47,6 +49,7 @@ Output:
 14 right
 15 goal
 16 up
+```
 
 If the input contains “q” following a number n, the program has to print the four Q-values associated with each of the four possible actions in the state that has an index n. Here is an example:
 Input: 15 12 8 6 q 11
@@ -59,18 +62,22 @@ left 0.89
 ## Tie-Breaking
 
 In some situations, there might be similar q-values for different actions in the final stage when the final policy needs to be printed. For example:
+
+```
 Input: 15 12 8 6 q 11
 Output:
 up 100.0
 right 100.0
 down 0.89
 left 0.89
+```
 
 where two similar maximum q-values for the up and right actions are available. In these situations, use a clockwise priority for printing the final policy (i.e., up, right, down, left).
 
 ## Additional examples
 
-Input:10 8 9 6 p
+```
+Input: 10 8 9 6 p
 output:
 1 right
 2 right
@@ -89,17 +96,16 @@ output:
 15 down
 16 down
 
-input:10 8 9 6 q 2
-output:
+Input: 10 8 9 6 q 2
+Output:
 up -0.01
 right 0.89
 down -0.01
 left -0.1
 
-        	input:12 7 5 6 p
-        	output:
-                    	1	right
-
+Input: 12 7 5 6 p
+Output:
+1	right
 2 right
 3 up
 4 up
@@ -116,9 +122,8 @@ left -0.1
 15 up
 16 up
 
-        	input:12 7 5 6 q 3
-        	output:
-
+Input:12 7 5 6 q 3
+Output:
 up 100.0
 right 0.89
 down 9.9
@@ -143,8 +148,7 @@ Output:
 15 down
 16 forbid
 
-Input:
-13 11 7 15 p
+Input: 13 11 7 15 p
 Output:
 1 up
 2 up
@@ -162,3 +166,5 @@ Output:
 14 left
 15 wall-square
 16 down
+
+```
