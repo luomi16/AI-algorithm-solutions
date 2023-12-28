@@ -1,4 +1,4 @@
-The collection of CISC681-AI code
+The homework of my AI course
 
 1. [Burnt Pancake Problem](hw1/hw1.py)
 
