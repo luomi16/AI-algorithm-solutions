@@ -19,7 +19,6 @@ def flip(s, i):
 def heuristic(state):
     goal = ''.join([str(i) for i in range(1, len(state) // 2 + 1)])
     actual = ''.join([state[i] for i in range(0, len(state), 2)])
-    # 从大到小遍历，找到第一个不在正确位置的煎饼。
     for i in range(len(goal) - 1, -1, -1):
         if actual[i] != goal[i]:
             return int(goal[i])
