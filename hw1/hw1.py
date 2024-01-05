@@ -76,18 +76,19 @@ def a_star_pancake(start):
     return []
 
 
-start_input = input()
-start, search_type = start_input[:-2], start_input[-1]
+if __name__ == "__main__":
+    start_input = input()
+    start, search_type = start_input[:-2], start_input[-1]
 
-if search_type == "b":
-    steps = bfs_pancake(start)
-    print("Steps (BFS):")
-    for step in steps:
-        print(step)
-elif search_type == "a":
-    steps = a_star_pancake(start)
-    print("Steps (A*):")
-    for step, g, h in steps:
-        print(f"{step} g:{g}, h:{h}")
-else:
-    print("Invalid Input!")
+    if search_type == "b":
+        steps = bfs_pancake(start)
+        print("Steps (BFS):")
+        for step in steps:
+            print(step)
+    elif search_type == "a":
+        steps = a_star_pancake(start)
+        print("Steps (A*):")
+        for step, g, h in steps:
+            print(f"{step} g:{g}, h:{h}")
+    else:
+        print("Invalid Input!")

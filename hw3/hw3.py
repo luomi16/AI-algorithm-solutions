@@ -101,17 +101,18 @@ def print_q_values(state):
         print(f"{actions[a]}    {formatted_value}")
 
 
-# Input parsing and execution
-input_data = input().split()
-goal1, goal2, forbidden, wall = map(int, input_data[:4])
-output_format = input_data[4]
-start = 2
+if __name__ == "__main__":
+    # Input parsing and execution
+    input_data = input().split()
+    goal1, goal2, forbidden, wall = map(int, input_data[:4])
+    output_format = input_data[4]
+    start = 2
 
-q_learning(start, goal1, goal2, forbidden, wall)
-# epsilon = 0  # Set epsilon to 0 after training
+    q_learning(start, goal1, goal2, forbidden, wall)
+    # epsilon = 0  # Set epsilon to 0 after training
 
-if output_format == 'p':
-    print_policy()
-elif output_format == 'q':
-    state_query = int(input_data[5]) - 1
-    print_q_values(state_query)
+    if output_format == 'p':
+        print_policy()
+    elif output_format == 'q':
+        state_query = int(input_data[5]) - 1
+        print_q_values(state_query)
